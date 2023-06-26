@@ -8,22 +8,22 @@
  */
 void puts_half(char *str)
 {
-int k;
-int h;
-int t;
+	int k;
+	int h;
+	int t;
 
-t = 0;
-for (k = 0; str[k] != 0; k++)
-t++;
+	t = 0;
+	for (k = 0; str[k] != '\0'; k++)
+		t++;
 
-h = (t / 2);
-if ((t % 2) == 1)
-{
-h = ((t + 1) / 2);
-}
-for (k = h; str[k] != 0; k++)
-{
-_putchar(str[k]);
-}
-_putchar(n);
+	h = (t / 2);
+	if ((t % 2) == 1)
+	{
+		h = ((t + 1) / 2);
+	}
+	for (k = h; str[k] != '\0'; k++)
+	{
+		_putchar(str[k]);
+	}
+	_putchar('\n');
 }
