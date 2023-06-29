@@ -1,32 +1,30 @@
 #include "main.h"
 
 /**
- * cap_string - Converts a string to title case
+ * leet - encodes a string into 1337
+ * @str: pointer to string to operate on.
  *
- * @str: Pointer to the string to modify
- *
- * Return: Pointer to the modified string.
+ * Return: character pointer to modified str
  */
-char *cap_string(char *str)
+char *leet(char *str)
 {
-	int i = 0;
+	int count = 0, i;
+	int low_case[] = {97, 101, 111, 116, 108};
+	int uppercase[] = {65, 69, 79, 84, 76};
+	int numbers[] = {52, 51, 48, 55, 49};
 
-	while (str[i])
+	while (*(str + count) != '\0')
 	{
-		while (!(str[i] >= 'a' && str[i] <= 'z'))
+		for (i = 0; i < 5; i++)
 		{
-			i++;
+			if (*(str + count) == low_case[i] ||
+			    *(str + count) == uppercase[i])
+			{
+			*(str + count) = numbers[i];
+			break;
+			}
 		}
-		if ((str[i - 1] == ' ' || str[i - 1] == '\t' ||
-		    str[i - 1] == '\n' || str[i - 1] == ',' ||
-		    str[i - 1] == '!' || str[i - 1] == '.' ||
-		    str[i - 1] == '"' || str[i - 1] == '?' ||
-		    str[i - 1] == ';' || str[i - 1] == '(' || str[i - 1] == ')'
-		    || str[i - 1] == '{' || str[i - 1] == '}' || i == 0))
-		{
-			str[i] = str[i] - 32;
-		}
-		i++;
+		count++;
 	}
 	return (str);
 }
