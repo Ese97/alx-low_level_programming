@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * cap_string - Converst a string to title case
+ * cap_string - Converts a string to title case
  *
  * @str: Pointer to the string to modify
  *
