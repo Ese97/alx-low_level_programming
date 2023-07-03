@@ -9,23 +9,23 @@
  */
 char *_strchr(char *s, char c)
 {
-char *end = s;
-int i;
+	char *end = s;
+	int i;
 
-/*
- *while (*end != 0)
- *{
- *end++;
- *}
- */
-/*search for c in s, search till 0 */
-for (i = 0; end[i] != 0; i++)
-if (end[i] == c)
-{
-return (end + i);
-}
-/* return pointer to null s element if c not found*/
-if (end[i] == c)
-return (end + 1);
-return (0);
+	/*
+	 *while (*end != '\0')
+	 *{
+	 *	end++;
+	 *}
+	 */
+	/*search for c in s, search till '\0' */
+	for (i = 0; end[i] != '\0'; i++)
+		if (end[i] == c)
+		{
+			return (end + i);
+		}
+	/* return pointer to null s element if c not found*/
+	if (end[i] == c)
+		return (end + 1);
+	return (0);
 }
