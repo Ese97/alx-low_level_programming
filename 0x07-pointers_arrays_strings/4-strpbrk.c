@@ -11,22 +11,22 @@
  */
 char *_strpbrk(char *s, char *accept)
 {
-int i = 0;
-int x = 0;
+	int i = 0;
+	int x = 0;
 
-/*search through s */
-for (; s[i] != 0; i++)
-{
-/* search through accept*/
-for (; accept[x] != 0; x++)
-{
-/* compare s and accept */
-if (s[i] == accept[x])
-{
-return (s + i);
-}
-}
-}
-return (0);
+	/*search through s */
+	for (; s[i] != '\0'; i++)
+	{
+		/* search through accept*/
+		for (; accept[x] != '\0'; x++)
+		{
+			/* compare s and accept */
+			if (s[i] == accept[x])
+			{
+				return (s + i);
+			}
+		}
+	}
+	return (0);
 
 }
