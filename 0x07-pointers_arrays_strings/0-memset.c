@@ -10,12 +10,12 @@
  */
 char *_memset(char *s, char b, unsigned int n)
 {
-unsigned int i;
+	unsigned int i;
 
-/* loop through s and assign b to the first n positions of s */
-for (i = 0; i < n; i++)
-{
-s[i] = b;
-}
-return (s);
+	/* loop through s and assign b to the first n positions of s */
+	for (i = 0; i < n; i++)
+	{
+		s[i] = b;
+	}
+	return (s);
 }
